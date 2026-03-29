@@ -1,0 +1,11 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        unordered_map<int, bool> tab = {};
+        for (int i=0;i < nums.size(); i++) {
+            if (tab.contains(nums[i])) return true;
+            tab[nums[i]] = true;
+        }
+        return false;
+    }
+};
